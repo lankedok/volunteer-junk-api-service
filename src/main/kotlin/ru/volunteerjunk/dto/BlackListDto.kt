@@ -9,5 +9,6 @@ data class BlackListDto(
         val address: String,
         val city: String,
         val social: String,
-        val reason: String
+        val reason: String,
+        val author: String
 )

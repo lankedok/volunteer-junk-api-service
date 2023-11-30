@@ -10,6 +10,7 @@ import ru.volunteerjunk.service.BlackListService
 class BlackListServiceImpl(
         private val blackListRepository: BlackListRepository
 ) : BlackListService {
+
     override fun getAll(): List<BlackListDto> {
         return blackListRepository.findAll().map { it.toDto() }
     }
@@ -24,7 +25,8 @@ class BlackListServiceImpl(
                     address = this.address,
                     city = this.city,
                     social = this.social,
-                    reason = this.reason
+                    reason = this.reason,
+                    author = this.author
             )
 
 }
