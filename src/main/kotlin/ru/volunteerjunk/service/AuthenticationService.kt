@@ -32,13 +32,16 @@ class AuthenticationService(
 
         refreshTokenRepository.save(refreshToken, user)
 
+        val token = refreshAccessToken(refreshToken)
+
         return AuthenticationResponse(
                 accessToken = accessToken,
-                refreshToken = refreshToken
+                refreshToken = refreshToken,
+                token = token
         )
     }
 
-    fun refreshAccessToken(token: String): String? {
+    private fun refreshAccessToken(token: String): String? {
         val extractedEmail = tokenService.extractEmail(token)
 
         return extractedEmail?.let { email ->

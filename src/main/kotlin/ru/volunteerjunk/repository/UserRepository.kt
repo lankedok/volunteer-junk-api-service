@@ -12,7 +12,7 @@ class UserRepository(private val encoder: PasswordEncoder) {
     private val users = mutableListOf(
             User(
                     id = UUID.randomUUID(),
-                    email = "ex1@gmail.com",
+                    email = "excom",
                     password = encoder.encode("pass1") ,
                     role = Role.USER
             ),

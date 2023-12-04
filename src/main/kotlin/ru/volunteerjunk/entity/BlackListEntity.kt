@@ -11,21 +11,21 @@ class BlackListEntity(
         @Column
         val id: Int = 0,
         @Column
-        val name: String = "",
+        val name: String,
         @Column
-        val surname: String = "",
+        val surname: String,
         @Column
-        val patronymic: String = "",
+        val patronymic: String,
         @Column
-        val telephone: String = "",
+        val telephone: String,
         @Column
-        val address: String = "",
+        val address: String,
         @Column
         val city: String = "",
         @Column
-        val social: String = "",
+        val social: String,
         @Column
-        val reason: String = "",
+        val reason: String,
         @Column
-        val author: String = ""
+        val author: String
 )
