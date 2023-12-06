@@ -2,7 +2,7 @@ package ru.volunteerjunk.config
 
 import org.springframework.boot.context.properties.ConfigurationProperties
 
-//@ConfigurationProperties("jwt")
+
 @ConfigurationProperties("jwt")
 data class JwtProperties(
         val key: String,
